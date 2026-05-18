@@ -59,8 +59,7 @@ def get_input_text():
     if len(sys.argv) > 2:
         raise AssertionError("more than one argument is provided")
     elif len(sys.argv) == 1:
-        print("What is the text to count?")
-        text = sys.stdin.read()
+        text = input("What is the text to count?\n")
     else:
         text = sys.argv[1]
     return text
@@ -85,9 +84,8 @@ def main():
         print(f"{counts['punctuation']} punctuation marks")
         print(f"{counts['space']} spaces")
         print(f"{counts['digit']} digits")
-
-    except AssertionError as e:
-        print(f"AssertionError: {e}")
+    except Exception as e:
+        print(f"{type(e).__name__}: {e}")
 
 
 if __name__ == "__main__":
