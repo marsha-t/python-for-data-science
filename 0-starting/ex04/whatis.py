@@ -1,10 +1,12 @@
 import sys
 
+
 def is_even(number):
     if number % 2 == 0:
         print("I'm Even.")
     else:
         print("I'm Odd.")
+
 
 def parse_argument():
     if len(sys.argv) > 2:
@@ -16,13 +18,15 @@ def parse_argument():
     except ValueError:
         raise AssertionError("argument is not an integer")
 
+
 def main():
     try:
         number = parse_argument()
         if number is not None:
             is_even(number)
-    except AssertionError as e: 
+    except AssertionError as e:
         print(f"AssertionError: {e}")
+
 
 if __name__ == "__main__":
     main()
