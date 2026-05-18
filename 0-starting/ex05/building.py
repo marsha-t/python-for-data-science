@@ -74,7 +74,7 @@ def main():
         AssertionError:
             - more than one argument is provided
     """
-    
+
     try:
         text = get_input_text()
         counts = count_char(text)
