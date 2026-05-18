@@ -14,7 +14,7 @@ def check_arguments():
         AssertionError:
             - number of arguments incorrect
             - second argument can't be converted to int
-            - characters in first argument is not alphanumeric nor space
+            - character in first argument is not alphanumeric nor space
     """
     if len(sys.argv) != 3:
         raise AssertionError("the arguments are bad")
@@ -29,14 +29,13 @@ def check_arguments():
 
 def main():
     """
-    Filter and display words longer than given length
+    Validate input arguments, filter and display words longer than given length
 
     Raises:
         AssertionError:
             - if program arguments are invalid
 
     """
-    # TODO add docstring
     try:
         text, number = check_arguments()
         words = text.split()

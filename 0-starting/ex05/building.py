@@ -4,7 +4,7 @@ import string
 
 def count_char(text):
     """
-    Counts different character types present in string
+    Count different character types present in string
 
     Args:
         text (str): string to analyse
@@ -44,7 +44,7 @@ def count_char(text):
 
 def get_input_text():
     """
-    Validates command-line arguments and retrieves input text
+    Validate command-line arguments and retrieves input text
     If no argument provided, prompts user for input through stdin
 
     Returns:
@@ -67,7 +67,7 @@ def get_input_text():
 
 def main():
     """
-    Validates input arguments, counts character categories
+    Validate input arguments, counts character categories
     in provided text, and displays results
 
     Raises:
