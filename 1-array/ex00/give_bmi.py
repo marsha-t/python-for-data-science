@@ -1,3 +1,4 @@
+import numpy as np
 
 def give_bmi(
     height: list[int | float],
@@ -41,7 +42,10 @@ def give_bmi(
     if any(w <= 0 for w in weight):
         raise ValueError("Weights must be positive")
 
-    return [w / (h ** 2) for h, w in zip(height, weight)]
+    np_height = np.array(height)
+    np_weight = np.array(weight)
+    bmi = np_weight / (np_height ** 2)
+    return bmi.tolist()
 
 
 def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
@@ -74,4 +78,5 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
     ):
         raise TypeError("Not all BMI values are numbers")
 
-    return [b > limit for b in bmi]
+    np_bmi = np.array(bmi)
+    return (np_bmi > limit).tolist()
