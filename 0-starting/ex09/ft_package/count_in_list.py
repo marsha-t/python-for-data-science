@@ -4,10 +4,10 @@ def count_in_list(lst, item):
 
     Args:
         lst (list):
-            list to search in 
+            list to search in
         item:
             item to count frequency for
-    
+
     Returns:
         int:
             frequency of item in list
