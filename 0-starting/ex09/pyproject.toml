@@ -1,0 +1,22 @@
+# Defines how package is built
+[build-system]
+
+# tool to build package
+requires = ["setuptools>=61.0"]  
+
+# backend responsible for packaging 
+build-backend = "setuptools.build_meta"
+
+
+[project]
+name = "ft_package"
+version = "0.0.1"
+authors = [
+  { name="mateo", email="mateo@student.42abudhabi.ae" },
+]
+description = "A sample test package"
+readme = "README.md"
+license = { text = "MIT" }
+
+[project.urls]
+Homepage = "https://github.com/mateo/ft_package"
