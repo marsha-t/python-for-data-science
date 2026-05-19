@@ -1,5 +1,6 @@
 import numpy as np
 
+
 def give_bmi(
     height: list[int | float],
     weight: list[int | float]
@@ -14,7 +15,7 @@ def give_bmi(
             list of weights in kilograms
 
     Returns:
-        (list[int | float]):
+        list[int | float]:
             list containing BMI values
 
     Raises:
@@ -59,7 +60,7 @@ def apply_limit(bmi: list[int | float], limit: int) -> list[bool]:
             limit used for comparison
 
     Returns:
-        (list[bool]):
+        list[bool]:
             list identifying BMI values that are above the limit
 
     Raises:
