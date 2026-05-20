@@ -31,8 +31,6 @@ def slice_me(family: list, start: int, end: int) -> list:
     if not family:  # len(family) == 0
         raise ValueError("family is empty")
     if not all(isinstance(row, list) for row in family):
-        # if not isinstance(family[0], list) or not isinstance(family[1], list):
-        # document why dont use this
         raise TypeError("family is not a 2D array")
     if not all(len(row) == len(family[0]) for row in family):
         raise ValueError("Rows are not the same length")
