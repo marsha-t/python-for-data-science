@@ -45,9 +45,6 @@ def main():
 
     bmi = give_bmi(height, weight)
 
-  
-
-
     print("\n===== VALID LIMIT TESTS =====")
 
     test_limit_case(

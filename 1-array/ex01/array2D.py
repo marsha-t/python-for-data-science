@@ -35,9 +35,9 @@ def slice_me(family: list, start: int, end: int) -> list:
     if not all(len(row) == len(family[0]) for row in family):
         raise ValueError("Rows are not the same length")
     if not all(
-        isinstance(value, (int, float)) 
-        and not isinstance(value, bool) 
-        for row in family 
+        isinstance(value, (int, float))
+        and not isinstance(value, bool)
+        for row in family
         for value in row
     ):
         raise TypeError("Array contains non-numeric values")
