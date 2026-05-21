@@ -21,7 +21,7 @@ def validate_path(path: str) -> None:
         raise ValueError("Only CSV formats allowed ")
 
 
-def load(path: str) -> pd.DataFrame | None:
+def load(path: str) -> pd.DataFrame:
     """
     Load CSV dataset and print its dimensions
 

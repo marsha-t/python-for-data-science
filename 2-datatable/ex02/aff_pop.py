@@ -14,14 +14,22 @@ def convert_population(value: str) -> float:
     Returns:
         float:
             Population in millions
+    
+    Notes:
+        If invalid population value, 0.0 is returned
     """
-    if value.endswith("k"):
-        return float(value[:-1]) / 1000
-    if value.endswith("M"):
-        return float(value[:-1])
-    if value.endswith("B"):
-        return float(value[:-1]) * 1000
-    return float(value) / 1000000
+    try:
+        value = value.strip()
+        if value.endswith("k"):
+            return float(value[:-1]) / 1000
+        if value.endswith("M"):
+            return float(value[:-1])
+        if value.endswith("B"):
+            return float(value[:-1]) * 1000
+        return float(value) / 1000000
+    except ValueError:
+        print(f"Invalid population value: {value}")
+        return 0.0
 
 
 def aff_pop(data: pd.DataFrame, country_1: str, country_2: str) -> None:
