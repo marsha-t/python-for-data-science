@@ -2,9 +2,7 @@ from abc import ABC, abstractmethod
 
 
 class Character(ABC):
-    """
-    Abstract base class representing a character
-    """
+    """Abstract base class representing a character"""
 
     def __init__(self, first_name, is_alive=True):
         """
@@ -20,38 +18,18 @@ class Character(ABC):
         self.is_alive = is_alive
 
     def die(self):
-        """
-        Set character state to dead
-        """
+        """Set character state to dead"""
         self.is_alive = False
 
     @abstractmethod
     def __str__(self):
-        """
-        Return string representation of character
-        """
+        """Return string representation of character"""
         pass
 
 
 class Stark(Character):
-    """
-    Class representing member of House Stark
-    """
-
-    def __init__(self, first_name, is_alive=True):
-        """
-        Initialise a Stark character
-
-        Args:
-            first_name (str):
-                character's first name
-            is_alive (bool):
-                character living state; defaults is True
-        """
-        super().__init__(first_name, is_alive)
+    """Class representing a member of House Stark"""
 
     def __str__(self):
-        """
-        Return family name
-        """
+        """Return family name"""
         return "Stark"

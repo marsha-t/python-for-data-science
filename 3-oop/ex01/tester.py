@@ -15,4 +15,9 @@ print(Cersei.__str__)
 print(Cersei.is_alive)
 print("---")
 Jaine = Lannister.create_lannister("Jaine", True)
-print(f"Name : {Jaine.first_name, type(Jaine).__name__}, Alive : {Jaine.is_alive}")
+print(
+    f"Name : {Jaine.first_name, type(Jaine).__name__}, Alive : {Jaine.is_alive}"
+)
+
+from S1E9 import Stark
+print(Stark("Ned").__str__)
