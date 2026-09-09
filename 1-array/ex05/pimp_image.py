@@ -163,6 +163,7 @@ def ft_grey(array: np.ndarray) -> np.ndarray:
     array = validate_image(array)
     if array.size == 0:
         return array
-    gray = np.mean(array, axis=2, keepdims=True).astype(np.uint8)
-    display_image(gray.squeeze(), "gray")
+    gray = (np.sum(array, axis=2, keepdims=True) / 3).astype(np.uint8)
+    gray = np.repeat(gray, 3, axis=2)
+    display_image(gray)
     return gray
