@@ -14,7 +14,7 @@ def convert_population(value: str) -> float:
     Returns:
         float:
             Population in millions
-    
+
     Notes:
         If invalid population value, 0.0 is returned
     """
@@ -77,7 +77,7 @@ def aff_pop(data: pd.DataFrame, country_1: str, country_2: str) -> None:
 
 def main():
     """
-    Load dataset and display life expectancy graph for UAE
+    Load dataset and display population graph for UAE
     """
     data = load("population_total.csv")
 

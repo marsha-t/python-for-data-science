@@ -1,5 +1,15 @@
-.venv
-__pycache__
+# Python cache files
+__pycache__/
+*.pyc
 
+# Test cache
+.pytest_cache/
+
+# Virtual environments
+venv/
+.venv/
+
+# Package build outputs
+build/
 dist/
-*.egg-info
+*.egg-info/
